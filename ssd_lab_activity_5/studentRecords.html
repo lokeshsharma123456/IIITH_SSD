@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<br><br>
+	<title>hi</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<head>
+
+		<h1 align="center"> Students Records</h1>
+
+		<script >
+			function addRow()
+			{
+				var Rollno = document.getElementById('Rollno').value;
+				var Name = document.getElementById('Name').value;
+				var table=document.getElementById('table')[0];
+
+				var newRow = table.insertRow(table.rows.length);
+
+				var cel1= newRow.insertCell(0);
+				var cel2= newRow.insertCell(1);
+				
+
+				cel1.innerHTML = Rollno;
+				cell2.innerHTML = Name;
+
+
+			} 
+		</script>
+		<style>
+table, th, td {
+    padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+th, td {
+  background-color: #96D4D4;
+}
+</style>
+	</head>
+</head><br><br><br>
+<div class="login-form">
+<body>
+	<input type="text" name="Rollno" id="Rollno" placeholder="Rollno"/>
+	<input type="text" name="Name" id="Name" placeholder="Name" /><br><br>
+	<button onclick="addRow();">ADD NEW</button><br><br>
+
+<table id="myTable" border =1 cellpadding="1" cellspacing="5">
+  <tr> 
+    <td>roll no</td>
+    <td>name</td>
+  </tr>
+  <tr>
+    <td>Row2 cell1</td>
+    <td>Row2 cell2</td>
+  </tr>
+ 
+</table>
+<br>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = "NEW CELL1";
+  cell2.innerHTML = "NEW CELL2";
+}
+</script>
+
+</body>
+</div>
+</html>
